@@ -37,7 +37,9 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $updateQuery = 'INSERT INTO todo VALUES(NULL, \''.$title.'\''; // IMPLEMENT ME
+                
+        $updateQuery = 'UPDATE todo SET done = done ^ 1'; // use boolean théory to toggle
+        }
         if(!$db->query($updateQuery)) {
           die(print_r($db->errorInfo(), true));
         }
