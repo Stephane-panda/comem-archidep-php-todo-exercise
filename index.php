@@ -1,9 +1,9 @@
 <?php
 
 define('BASE_URL', '/');
-define('DB_USER', 'todolist');
-define('DB_PASS', 'chAngeMeN0w!');
-define('DB_NAME', 'todolist');
+define('DB_USER', 'archidep');
+define('DB_PASS', 'archidep');
+define('DB_NAME', 'archidep');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');
 
