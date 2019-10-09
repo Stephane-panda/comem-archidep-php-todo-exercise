@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', '/');
+define('BASE_URL', '/archidep/comem-archidep-php-todo-exercise/');
 define('DB_USER', 'archidep');
 define('DB_PASS', 'archidep');
 define('DB_NAME', 'archidep');
@@ -53,7 +53,7 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $deleteQuery = ''; // IMPLEMENT ME
+        $deleteQuery = 'DELETE FROM todo WHERE id = \''.$id.'\''; // Delete the clicked ID
         if(!$db->query($deleteQuery)) {
           die(print_r($db->errorInfo(), true));
         }
@@ -70,7 +70,7 @@ if (isset($_POST['action'])) {
 /**
  * Select all tasks from the database.
  */
-$selectQuery = ''; // IMPLEMENT ME
+$selectQuery = 'SELECT * FROM todo'; // SELECT everything
 $items = $db->query($selectQuery);
 ?>
 
