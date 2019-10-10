@@ -50,8 +50,8 @@ if (isset($_POST['action'])) {
 
     /**
      * Delete a task, then redirect to the base URL.
-     */
-    case 'delete':
+     **/
+      case 'delete':
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
