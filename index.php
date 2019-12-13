@@ -1,11 +1,11 @@
 <?php
 
-define('BASE_URL', '/archidep/comem-archidep-php-todo-exercise/');
-define('DB_USER', 'archidep');
-define('DB_PASS', 'archidep');
-define('DB_NAME', 'archidep');
-define('DB_HOST', '127.0.0.1');
-define('DB_PORT', '3306');
+define('BASE_URL', getenv('TODOLIST_BASE_URL') ?: '/archidep/comem-archidep-php-todo-exercise/');
+define('DB_USER', getenv('TODOLIST_DB_USER') ?: 'archidep');
+define('DB_PASS', getenv('TODOLIST_DB_PASS'));
+define('DB_NAME', getenv('TODOLIST_DB_NAME') ?: 'archidep');
+define('DB_HOST', getenv('TODOLIST_DB_HOST') ?: '127.0.0.1');
+define('DB_PORT', getenv('TODOLIST_DB_PORT') ?: '3306');
 
 $db = new PDO('mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_NAME, DB_USER, DB_PASS);
 $items = array();
